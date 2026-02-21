@@ -1,0 +1,10 @@
+development:
+  dialect: sqlite3
+  datasource: test.db
+  dir: migrations/sqlite3
+
+production:
+  dialect: postgres
+  datasource: host=localhost dbname=imghost user=${DB_USER} password=${DB_PASSWORD} sslmode=disable
+  dir: migrations/postgres
+  table: migrations
