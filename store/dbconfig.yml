@@ -1,10 +1,11 @@
+# this file is provided for convenience, migrations are run when the program starts up.
 development:
   dialect: sqlite3
   datasource: test.db
-  dir: migrations/sqlite3
+  dir: database/migrations/sqlite3
 
 production:
   dialect: postgres
   datasource: host=localhost dbname=imghost user=${DB_USER} password=${DB_PASSWORD} sslmode=disable
-  dir: migrations/postgres
+  dir: database/migrations/postgres
   table: migrations
